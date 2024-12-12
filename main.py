@@ -68,7 +68,7 @@ MODEL_PATHS = {
         'scaler': None
     },
     ModelType.arima: {
-        'model': os.path.join(BASE_DIR, 'modelARIMA_price_prediction.pkl'),
+        'model': os.path.join(BASE_DIR, 'ARIMA_price_prediction.pkl'),
         'scaler': None
     }
 }
