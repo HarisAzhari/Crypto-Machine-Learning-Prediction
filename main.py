@@ -44,10 +44,10 @@ class CoinType(str, Enum):
 
 # Model configurations
 MODEL_PATHS = {
-    ModelType.lstm: {'model': 'LSTM_price_prediction.keras', 'scaler': 'LSTM_price_scaler.pkl'},
-    ModelType.nn: {'model': 'NN_price_prediction.keras', 'scaler': 'NN_price_scaler.pkl'},
-    ModelType.gru: {'model': 'gru_model.h5', 'scaler': None},
-    ModelType.arima: {'model': 'ARIMA_price_prediction.pkl', 'scaler': None}
+    ModelType.lstm: {'model': 'models/LSTM_price_prediction.keras', 'scaler': 'models/LSTM_price_scaler.pkl'},
+    ModelType.nn: {'model': 'models/NN_price_prediction.keras', 'scaler': 'models/NN_price_scaler.pkl'},
+    ModelType.gru: {'model': 'models/gru_model.h5', 'scaler': None},
+    ModelType.arima: {'model': 'models/ARIMA_price_prediction.pkl', 'scaler': None}
 }
 
 # Pydantic models for response
