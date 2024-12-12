@@ -175,9 +175,6 @@ async def health_check():
     """Health check endpoint"""
     return {"status": "healthy"}
 
-# Remove/comment out the old if __name__ block and use this instead:
-app = FastAPI(
-    title="Cryptocurrency Price Prediction API",
-    description="API for predicting cryptocurrency prices using various models",
-    version="1.0.0"
-)
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5001)
