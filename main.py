@@ -47,7 +47,7 @@ MODEL_PATHS = {
     ModelType.lstm: {'model': 'models/LSTM_price_prediction.keras', 'scaler': 'models/LSTM_price_scaler.pkl'},
     ModelType.nn: {'model': 'models/NN_price_prediction.keras', 'scaler': 'models/NN_price_scaler.pkl'},
     ModelType.gru: {'model': 'models/gru_model.h5', 'scaler': None},
-    ModelType.arima: {'model': 'models/ARIMA_price_prediction.pkl', 'scaler': None}
+    ModelType.arima: {'model': 'modelARIMA_price_prediction.pkl', 'scaler': None}
 }
 
 # Pydantic models for response
@@ -175,6 +175,9 @@ async def health_check():
     """Health check endpoint"""
     return {"status": "healthy"}
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=5001)
+# Remove/comment out the old if __name__ block and use this instead:
+app = FastAPI(
+    title="Cryptocurrency Price Prediction API",
+    description="API for predicting cryptocurrency prices using various models",
+    version="1.0.0"
+)
